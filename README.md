@@ -109,6 +109,7 @@ Proyecto_Python/
 ## Créditos
 
 - **Mediapipe**: Librería de Google para el rastreo de manos.
-- **YOLOv10 (Ultralytics)**: Modelo de detección de objetos, utilizado para la detección de rostros y emociones.
+- **YOLOv8 (Ultralytics)**: Modelo de detección de objetos, utilizado para la detección de rostros y emociones.
+- **Kaggle**: Agradecemos a Kaggle por proporcionar los conjuntos de datos utilizados para entrenar y probar los modelos en este proyecto. ¡Su plataforma ha sido invaluable para el desarrollo de este trabajo!
 
 ****
