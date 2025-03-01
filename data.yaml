@@ -1,0 +1,4 @@
+train: C:\Users\Lightning\Documents\Proyecto_Python\archive\train
+val: C:\Users\Lightning\Documents\Proyecto_Python\archive\test
+nc: 7  # Número de clases (emociones)
+names: ['angry','disgust', 'fear', happy', 'sad', 'surprise', 'neutral']  # Clases (emociones)
