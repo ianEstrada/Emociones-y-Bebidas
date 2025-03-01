@@ -23,3 +23,5 @@ def train_model():
 
 if __name__ == '__main__':
     train_model()
+    for i in train_model():
+        print("GUardando Caras..")
