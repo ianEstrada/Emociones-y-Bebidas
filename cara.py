@@ -37,6 +37,7 @@ while cap.isOpened():
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
-
+    
+# Liberar recursos
 cap.release()
 cv2.destroyAllWindows()
