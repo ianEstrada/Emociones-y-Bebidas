@@ -38,7 +38,7 @@ Para instalar las dependencias necesarias, sigue estos pasos:
    ```bash
    python -m venv venv
    source venv/bin/activate   # En Linux/Mac
-   .source env\Scripts set activate    # En Windows
+   source env\Scripts set activate    # En Windows
    ```
 
 2. Instala las dependencias necesarias a través del archivo `requirements.txt`:
