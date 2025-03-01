@@ -106,10 +106,16 @@ Proyecto_Python/
 - **Mejorar el Reconocimiento de Señas**: Mejorar el modelo de reconocimiento de señas con redes neuronales entrenadas con los datos CSV generados.
 - **Ampliación de las Emociones Detectadas**: Ampliar el sistema de emociones para detectar más categorías de emociones en los rostros.
 
+## Dataset
+
+El proyecto utiliza el dataset **FER2013**, que contiene imágenes de rostros humanos etiquetados con diferentes emociones. Este conjunto de datos se utilizó para entrenar el modelo **YOLOv10** para la detección de emociones.
+
+Puedes acceder al dataset a través de este [enlace de Kaggle](https://www.kaggle.com/datasets/msambare/fer2013/data).
+
 ## Créditos
 
 - **Mediapipe**: Librería de Google para el rastreo de manos.
 - **YOLOv8 (Ultralytics)**: Modelo de detección de objetos, utilizado para la detección de rostros y emociones.
-- **Kaggle**: Agradecemos a Kaggle por proporcionar los conjuntos de datos utilizados para entrenar y probar los modelos en este proyecto. ¡Su plataforma ha sido invaluable para el desarrollo de este trabajo!
+- **Kaggle**: Agradecemos a Kaggle por proporcionar los conjuntos de datos utilizados para entrenar y probar los modelos en este proyecto.
 
-****
+***
