@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 import csv
-# Inicializar Mediapipe Hands
+
 mp_hands = mp.solutions.hands
 mp_draw = mp.solutions.drawing_utils
 hands = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5)
@@ -10,7 +10,6 @@ hands = mp_hands.Hands(min_detection_confidence=0.5, min_tracking_confidence=0.5
 # Captura de video
 cap = cv2.VideoCapture(0)
 
-# Función para guardar en un archivo CSV
 def guardar_en_csv(lecturas, nombre_archivo):
     with open(nombre_archivo, mode='a', newline='') as archivo:
         writer = csv.writer(archivo)
@@ -44,7 +43,7 @@ while cap.isOpened():
 
             # Crear la lista para guardar en CSV, con la etiqueta primero
             lectura = [etiqueta] + list(landmarks)
-            print(lectura)  # Imprime las coordenadas con la etiqueta
+            print(lectura)
 
             # Guardar los datos en el CSV
             guardar_en_csv(lectura, ruta_archivo)
@@ -53,5 +52,7 @@ while cap.isOpened():
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
+
+# Liberar Recursos
 cap.release()
 cv2.destroyAllWindows()

@@ -17,7 +17,6 @@ while cap.isOpened():
     # Convertir a escala de grises
     gray_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # Repetir el canal 3 veces para que YOLOv8 lo tome como RGB
     gray_frame = cv2.merge([gray_frame, gray_frame, gray_frame])
 
     # Realizar la detección con YOLOv8
@@ -30,14 +29,12 @@ while cap.isOpened():
             conf = box.conf[0].item()  
             label = result.names[int(box.cls[0])]  
 
-            # Dibujar el rectángulo y la etiqueta
             cv2.rectangle(frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
             cv2.putText(frame, f"{label} ({conf:.2f})", (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
 
     # Mostrar la imagen con detecciones
     cv2.imshow("Detección de Emociones con YOLOv8", frame)
 
-    # Salir con 'q'
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

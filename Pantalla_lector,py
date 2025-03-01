@@ -36,7 +36,7 @@ def reconocer_letra(landmarks, modelos, umbral=0.275):
 
 # Variables de letra
 
-palabra = "Hola"  # Almacena la palabra
+palabra = ""  
 letra_detectada = None  # Letra reconocida en tiempo real
 
 # Captura en tiempo real
@@ -56,11 +56,10 @@ while cap.isOpened():
             landmarks = np.array([[lm.x, lm.y, lm.z] for lm in hand_landmarks.landmark]).flatten()
             letra_detectada = reconocer_letra(landmarks, modelos)
 
-    # Mostrar palabra y letra detectada
+    # Mostrar palabra
     cv2.putText(frame, f'Palabra: {palabra}', (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
     cv2.putText(frame, f'Letra detectada: {letra_detectada or ""}', (10, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-    # Leer la tecla presionada
     key = cv2.waitKey(1) & 0xFF
 
     # Si presiona espacio, agrega la letra detectada
@@ -73,6 +72,7 @@ while cap.isOpened():
 
     # Mostrar el video
     cv2.imshow("Hand Tracking", frame)
-
+    
+# Liberar Recursos
 cap.release()
 cv2.destroyAllWindows()
