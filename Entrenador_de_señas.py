@@ -16,7 +16,7 @@ def guardar_en_csv(lecturas, nombre_archivo):
         writer.writerow(lecturas)
 
 # Ruta completa para guardar el archivo
-ruta_archivo = r'C:\Users\Lightning\Documents\Proyecto_Python\CSV Abecedario\FUCKYOU_Models.csv'
+ruta_archivo = r'C:\Users\Lightning\Documents\Proyecto_Python\CSV_Abecedario\FUCKYOU_Models.csv'
 
 while cap.isOpened():
     ret, frame = cap.read()
