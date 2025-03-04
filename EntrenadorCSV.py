@@ -16,7 +16,7 @@ def guardar_en_csv(lecturas, nombre_archivo):
         writer.writerow(lecturas)
 
 # Ruta completa para guardar el archivo
-ruta_archivo = r'C:\Users\Lightning\Documents\Proyecto_Python\CSV_Abecedario\FUCKYOU_Models.csv'
+ruta_archivo = r'C:\Users\Lightning\Documents\Proyecto_Python\CSV_Abecedario\random_Models.csv'
 
 while cap.isOpened():
     ret, frame = cap.read()
@@ -39,7 +39,7 @@ while cap.isOpened():
             landmarks = np.array(landmarks).flatten() 
 
             # Escribimosla etiqueta para esta serie de datos
-            etiqueta = 'FY'
+            etiqueta = 'or'
 
             # Crear la lista para guardar en CSV, con la etiqueta primero
             lectura = [etiqueta] + list(landmarks)
