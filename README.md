@@ -16,7 +16,7 @@ Este proyecto incluye tres aplicaciones basadas en visión por computadora:
 
 - **Reconocimiento de Señas en Tiempo Real**: Utiliza Mediapipe para rastrear las manos y reconocer las letras en lenguaje de señas.
 - **Entrenador de Señas**: Captura las posiciones de las manos y guarda los puntos clave en archivos CSV, etiquetados con las señas correspondientes.
-- **Reconocimiento de Emociones con YOLOv8**: Utiliza un modelo de YOLOv8 para detectar rostros y emociones en tiempo real a través de la cámara web.
+- **Reconocimiento de Emociones con YOLOv11**: Utiliza un modelo de YOLOv8 para detectar rostros y emociones en tiempo real a través de la cámara web.
 
 ### Descripción
 
@@ -26,15 +26,15 @@ El lector de señas reconoce letras del alfabeto de señas en tiempo real utiliz
 2. **Entrenador de Señas**  
 El entrenador captura datos de las manos usando Mediapipe y los guarda en archivos CSV. Estos datos contienen las coordenadas de 21 puntos clave de las manos y están etiquetados con la seña correspondiente. Los archivos CSV generados pueden usarse para entrenar un modelo de reconocimiento de señas.
 
-3. **Reconocimiento de Emociones con YOLOv10**  
-Utiliza un modelo YOLOv8 preentrenado para detectar rostros y emociones en tiempo real. El modelo puede identificar personas en imágenes y mostrar las emociones detectadas. Los resultados se visualizan en la pantalla con la caja delimitadora alrededor de los rostros y el nombre de la emoción detectada.
+3. **Reconocimiento de Emociones con YOLOv11**  
+Utiliza un modelo YOLOv11 preentrenado para detectar rostros y emociones en tiempo real. El modelo puede identificar personas en imágenes y mostrar las emociones detectadas. Los resultados se visualizan en la pantalla con la caja delimitadora alrededor de los rostros y el nombre de la emoción detectada.
 
 ### Tecnologías Utilizadas
 
 - Python 3.12.8
 - OpenCV
 - Mediapipe
-- YOLOv10 (Ultralytics)
+- YOLOv11 (Ultralytics)
 - NumPy
 - CSV
 
@@ -127,7 +127,7 @@ This project includes three computer vision-based applications:
 
 - **Real-Time Sign Language Recognition**: Uses Mediapipe to track hands and recognize letters in sign language.
 - **Sign Language Trainer**: Captures hand positions and saves key points in CSV files, labeled with corresponding signs.
-- **Emotion Recognition with YOLOv8**: Uses a YOLOv8 model to detect faces and emotions in real-time through the webcam.
+- **Emotion Recognition with YOLOv11**: Uses a YOLOv11 model to detect faces and emotions in real-time through the webcam.
 
 ### Description
 
@@ -137,8 +137,8 @@ The sign language reader recognizes letters from the sign language alphabet in r
 2. **Sign Language Trainer**  
 The trainer captures hand data using Mediapipe and saves it into CSV files. This data contains the coordinates of 21 key points on the hands and is labeled with the corresponding sign. The generated CSV files can be used to train a sign language recognition model.
 
-3. **Emotion Recognition with YOLOv10**  
-It uses a pre-trained YOLOv8 model to detect faces and emotions in real-time. The model can identify people in images and display the detected emotions. The results are visualized on the screen with a bounding box around the faces and the detected emotion name.
+3. **Emotion Recognition with YOLOv11**  
+It uses a pre-trained YOLOv11 model to detect faces and emotions in real-time. The model can identify people in images and display the detected emotions. The results are visualized on the screen with a bounding box around the faces and the detected emotion name.
 
 ### Technologies Used
 
@@ -243,7 +243,7 @@ You can access the dataset through this Kaggle link: [FER2013 Dataset](https://w
 ## Credits
 
 - **Mediapipe**: Google library for hand tracking.
-- **YOLOv10 (Ultralytics)**: Object detection model, used for face and emotion detection.
+- **YOLOv11 (Ultralytics)**: Object detection model, used for face and emotion detection.
 - **Kaggle**: Special thanks to Kaggle for providing the datasets used to train and test the models in this project.
 
 ***
