@@ -14,7 +14,7 @@ def main():
     data_path = "C:\\Users\\Lightning\\Documents\\Proyecto_Python\\data.yaml"
     
     # Entrenar el modelo
-    results = model.train(data=data_path, epochs=300, imgsz=640, device=device)
+    results = model.train(data=data_path, epochs=500, imgsz=640, device=device)
     
     # Guardar el modelo entrenado
     model.save("best_model.pt")
