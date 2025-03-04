@@ -11,7 +11,7 @@ def main():
     model.to(device)  # Enviar modelo a la GPU (si está disponible)
     
     # Ruta al archivo de configuración del dataset
-    data_path = "C:\\Users\\Lightning\\Documents\\Proyecto_Python\\data.yaml"
+    data_path = "C:\\Users\\Lightning\\Documents\\Proyecto_Python\\Data Models\\data.yaml"
     
     # Entrenar el modelo
     results = model.train(data=data_path, epochs=500, imgsz=640, device=device)
