@@ -7,16 +7,14 @@ def main():
     print(f"Usando dispositivo: {device}")
     
     # Cargar el modelo YOLO preentrenado
-    model = YOLO("yolo11n.pt")  # Asegúrate de que el nombre del modelo sea correcto
-    model.to(device)  # Enviar modelo a la GPU (si está disponible)
+    model = YOLO("yolo11n.pt") 
+    model.to(device)  
     
-    # Ruta al archivo de configuración del dataset
     data_path = "C:\\Users\\Lightning\\Documents\\Proyecto_Python\\Data Models\\data.yaml"
     
     # Entrenar el modelo
     results = model.train(data=data_path, epochs=500, imgsz=640, device=device)
     
-    # Guardar el modelo entrenado
     model.save("best_model.pt")
     print("Entrenamiento completado y modelo guardado como 'best_model.pt'")
 
