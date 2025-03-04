@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import numpy as np
 
 # Cargar el modelo YOLOv8 entrenado
-model = YOLO("C:\\Users\\Lightning\\Documents\\Proyecto_Python\\best.pt")
+model = YOLO("C:\\Users\\Lightning\\Documents\\Proyecto_Python\\best_model.pt")
 
 # Iniciar la webcam
 cap = cv2.VideoCapture(0)
