@@ -16,7 +16,7 @@ Este proyecto incluye tres aplicaciones basadas en visión por computadora:
 
 - **Reconocimiento de Señas en Tiempo Real**: Utiliza Mediapipe para rastrear las manos y reconocer las letras en lenguaje de señas.
 - **Entrenador de Señas**: Captura las posiciones de las manos y guarda los puntos clave en archivos CSV, etiquetados con las señas correspondientes.
-- **Reconocimiento de Emociones con YOLOv11**: Utiliza un modelo de YOLOv8 para detectar rostros y emociones en tiempo real a través de la cámara web.
+- **Reconocimiento de Emociones con FER**: Utiliza el modelo FER (Facial Expression Recognition) para detectar emociones en tiempo real a través de la cámara web.
 
 ### Descripción
 
@@ -26,15 +26,15 @@ El lector de señas reconoce letras del alfabeto de señas en tiempo real utiliz
 2. **Entrenador de Señas**  
 El entrenador captura datos de las manos usando Mediapipe y los guarda en archivos CSV. Estos datos contienen las coordenadas de 21 puntos clave de las manos y están etiquetados con la seña correspondiente. Los archivos CSV generados pueden usarse para entrenar un modelo de reconocimiento de señas.
 
-3. **Reconocimiento de Emociones con YOLOv11**  
-Utiliza un modelo YOLOv11 preentrenado para detectar rostros y emociones en tiempo real. El modelo puede identificar personas en imágenes y mostrar las emociones detectadas. Los resultados se visualizan en la pantalla con la caja delimitadora alrededor de los rostros y el nombre de la emoción detectada.
+3. **Reconocimiento de Emociones con FER**  
+Utiliza el modelo **FER** preentrenado para detectar emociones en tiempo real. El modelo puede identificar las emociones de las personas en imágenes y mostrar los resultados con la caja delimitadora alrededor de los rostros y el nombre de la emoción detectada.
 
 ### Tecnologías Utilizadas
 
 - Python 3.12.8
 - OpenCV
 - Mediapipe
-- YOLOv11 (Ultralytics)
+- FER (Facial Expression Recognition)
 - NumPy
 - CSV
 
@@ -42,7 +42,8 @@ Utiliza un modelo YOLOv11 preentrenado para detectar rostros y emociones en tiem
 
 Asegúrate de tener Python 3.12.8 instalado en tu sistema. Si no lo tienes, puedes descargarlo desde el sitio oficial de Python.
 
-Para instalar las dependencias necesarias, sigue estos pasos:
+Para instalar las dependencias necesarias, puedes usar el siguiente comando para instalar todos los paquetes de una vez:
+
 
 1. Crea un entorno virtual (opcional pero recomendado):
 
@@ -52,19 +53,10 @@ source venv/bin/activate   # En Linux/Mac
 source env\Scripts\activate  # En Windows
 ```
 
-2. Instala las dependencias necesarias a través del archivo `requirements.txt`:
+2. Instala las dependencias necesarias a través del archivo:
 
 ```bash
-pip install -r requirements.txt
-```
-
-**requirements.txt**:
-```
-opencv-python
-mediapipe
-numpy
-ultralytics
-torch
+pip install opencv-python mediapipe numpy fer
 ```
 
 ### Uso
@@ -121,31 +113,42 @@ Proyecto_Python/
 
 ---
 
+# Sign Language and Emotions Recognition Project
+
+## Language Menu
+
+Select a language to read the documentation:
+
+1. [Español](#proyecto-de-reconocimiento-de-señas-y-emociones)
+2. [English](#sign-language-and-emotions-recognition-project)
+
+---
+
 ## Sign Language and Emotions Recognition Project
 
-This project includes three computer vision-based applications:
+This project includes three applications based on computer vision:
 
-- **Real-Time Sign Language Recognition**: Uses Mediapipe to track hands and recognize letters in sign language.
+- **Real-time Sign Language Recognition**: Uses Mediapipe to track hands and recognize letters in sign language.
 - **Sign Language Trainer**: Captures hand positions and saves key points in CSV files, labeled with corresponding signs.
-- **Emotion Recognition with YOLOv11**: Uses a YOLOv11 model to detect faces and emotions in real-time through the webcam.
+- **Emotion Recognition with FER**: Uses the FER (Facial Expression Recognition) model to detect emotions in real-time through the webcam.
 
 ### Description
 
 1. **Sign Language Reader**  
-The sign language reader recognizes letters from the sign language alphabet in real-time using Mediapipe for hand tracking. The letter models are trained and stored in CSV files. The letter detection is performed by comparing the coordinates of the hand key points with the pre-trained models.
+The sign language reader recognizes letters from the sign language alphabet in real-time using Mediapipe for hand tracking. The sign models are trained and stored in CSV files. Letter detection is done by comparing the coordinates of key hand points with pre-trained models.
 
 2. **Sign Language Trainer**  
-The trainer captures hand data using Mediapipe and saves it into CSV files. This data contains the coordinates of 21 key points on the hands and is labeled with the corresponding sign. The generated CSV files can be used to train a sign language recognition model.
+The trainer captures hand data using Mediapipe and saves it in CSV files. This data contains the coordinates of 21 key hand points and is labeled with the corresponding sign. The generated CSV files can be used to train a sign language recognition model.
 
-3. **Emotion Recognition with YOLOv11**  
-It uses a pre-trained YOLOv11 model to detect faces and emotions in real-time. The model can identify people in images and display the detected emotions. The results are visualized on the screen with a bounding box around the faces and the detected emotion name.
+3. **Emotion Recognition with FER**  
+Uses the pre-trained **FER** model to detect emotions in real-time. The model can identify emotions of people in images and display the results with a bounding box around the faces and the name of the detected emotion.
 
 ### Technologies Used
 
 - Python 3.12.8
 - OpenCV
 - Mediapipe
-- YOLOv10 (Ultralytics)
+- FER (Facial Expression Recognition)
 - NumPy
 - CSV
 
@@ -153,7 +156,7 @@ It uses a pre-trained YOLOv11 model to detect faces and emotions in real-time. T
 
 Make sure you have Python 3.12.8 installed on your system. If not, you can download it from the official Python website.
 
-To install the required dependencies, follow these steps:
+To install the necessary dependencies, you can use the following command to install all packages at once:
 
 1. Create a virtual environment (optional but recommended):
 
@@ -162,20 +165,10 @@ python -m venv venv
 source venv/bin/activate   # On Linux/Mac
 source env\Scripts\activate  # On Windows
 ```
-
-2. Install the necessary dependencies via the `requirements.txt` file:
+2. Install the necessary dependencies through the following command:
 
 ```bash
-pip install -r requirements.txt
-```
-
-**requirements.txt**:
-```
-opencv-python
-mediapipe
-numpy
-ultralytics
-torch
+pip install opencv-python mediapipe numpy fer
 ```
 
 ### Usage
@@ -232,18 +225,9 @@ Proyecto_Python/
 
 ---
 
-## Dataset
-
-The project uses the **FER2013 dataset**, which contains images of human faces labeled with different emotions. This dataset was used to train the YOLOv10 model for emotion detection.
-
-You can access the dataset through this Kaggle link: [FER2013 Dataset](https://www.kaggle.com/datasets/msambare/fer2013/data).
-
----
-
 ## Credits
 
 - **Mediapipe**: Google library for hand tracking.
-- **YOLOv11 (Ultralytics)**: Object detection model, used for face and emotion detection.
-- **Kaggle**: Special thanks to Kaggle for providing the datasets used to train and test the models in this project.
+- **FER**: Emotion detection model, used for face and emotion detection.
 
 ***
