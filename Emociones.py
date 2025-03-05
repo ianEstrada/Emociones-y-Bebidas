@@ -42,11 +42,12 @@ while cap.isOpened():
         emotions, _ = emotion_detector.top_emotion(face)
 
         if emotions:
+            # Cambiar el color a un verde brillante para la emoción
             cv2.putText(frame, f"Emocion: {emotions}", (x, y-10),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-        # Dibujar un rectángulo alrededor del rostro
-        cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        # Dibujar un rectángulo alrededor del rostro en color azul
+        cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
 
     # Mostrar el video con detección de emociones
     cv2.imshow("Detección de Emociones", frame)
