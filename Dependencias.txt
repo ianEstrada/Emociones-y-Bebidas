@@ -1,0 +1,7 @@
+pip install tensorflow
+pip install setuptools
+pip install fer
+pip uninstall moviepy
+pip install moviepy==1.0.3
+pip install opencv-python
+pip install mediapipe
