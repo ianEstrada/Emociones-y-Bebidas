@@ -3,7 +3,6 @@ from fer import FER
 
 cap = cv2.VideoCapture(0)
 
-# Crear un detector de emociones
 emotion_detector = FER()
 
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
