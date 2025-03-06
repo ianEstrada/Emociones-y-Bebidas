@@ -9,20 +9,12 @@ Este proyecto utiliza OpenCV y FER (Facial Expression Recognition) para detectar
 - OpenCV
 - FER (Facial Expression Recognition)
 
-Instalar dependencias:
-
-```bash
-pip install opencv-python fer
-```
-
 ## Estructura del Proyecto
 
 ```
 Proyecto_Python/
 │
-├── emotion_recognition.py        # Script principal para la detección de emociones
-├── README.md                     # Este archivo
-└── dataset/                       # Conjunto de datos (si se tiene)
+└── emotion_recognition.py        # Script principal para la detección de emociones
 ```
 
 ## Uso
@@ -69,21 +61,16 @@ Este proyecto utiliza un modelo entrenado con YOLOv11 para detectar y clasificar
 - OpenCV
 - ultralytics
 
-Instalar dependencias:
-
-```bash
-pip install opencv-python ultralytics
-```
-
 ## Estructura del Proyecto
 
 ```
 Proyecto_Python/
 │
 ├── best_model.pt                # Modelo entrenado de YOLO11
-├── Bebiida.py                    # Script principal para la detección en tiempo real
-├── README.md                     # Este archivo
-└── dataset/                       # Conjunto de datos de entrenamiento (si se tiene)
+├── Bebida.py                    # Script principal para la detección en tiempo real
+|── EntrenarModelo.py            # Este Script Entrena el modelo yolo11n.pt (genera best_model.pt)
+|── yolo11n.pt                   # Modelo de YOLO usado para reconocimiento de objetos
+└── dataset/                      # Conjunto de datos de entrenamiento (si se tiene)
 ```
 
 ## Dataset
