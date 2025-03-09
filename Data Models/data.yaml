@@ -1,0 +1,13 @@
+train: C:\\Users\\Lightning\\Downloads\\Soft Drinks.v1i.yolov11\\train\\images
+val: C:\\Users\\Lightning\\Downloads\\Soft Drinks.v1i.yolov11\\valid\\images
+test: C:\\Users\\Lightning\\Downloads\\Soft Drinks.v1i.yolov11\\test\\images
+
+nc: 6
+names: ['coca-cola', 'fanta', 'pepsi', 'pibb', 'root-beer', 'sprite']
+
+roboflow:
+  workspace: test01-fr735
+  project: soft-drinks-632ij
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/test01-fr735/soft-drinks-632ij/dataset/1
